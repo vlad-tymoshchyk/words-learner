@@ -9,8 +9,8 @@
     "server:start:dev": "nodemon server/main.ts",
     "test:ui": "jest src -c jest.config.ui.js",
     "test:ui:watch": "jest src --watchAll -c jest.config.ui.js",
-    "test:server": "jest server -c jest.config.server.js",
-    "test:server:watch": "jest server --watchAll -c jest.config.server.js",
+    "test:server": "jest server -c jest.config.ui.js",
+    "test:server:watch": "jest server --watchAll -c jest.config.ui.js",
     "ci:test-e2e": "start-server-and-test server:start http://localhost:1080/status test:ui"
   },
   "keywords": [],

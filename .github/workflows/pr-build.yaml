@@ -9,16 +9,19 @@ jobs:
   Checks:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v3
 
-      - name: Setup node
+      - name: setup node
         uses: actions/setup-node@v3
         with:
           node-version: 16
 
-      - name: Install
+      - name: install
         run: npm ci
 
-      - name: Tests
+      - name: e2e tests
         run: npm run ci:test-e2e
+
+      - name: server unit tests
+        run: npm run test:server
